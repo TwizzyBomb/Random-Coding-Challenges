@@ -1,0 +1,15 @@
+1.	Rename the file to „[Application_Name]-[Table_Name].csv“
+a.	No spaces in name, use underscore
+b.	If file is xlsx, save as a csv
+2.	Open csv file and replace commas with another character that does not already exist in the data, save and close file
+a.	Search file for a character like ; and if none are found replace commas with ;
+3.	Open the TableXmlCreator tool in eclipse and run
+4.	Specify a single csv file or a directory of files as the input
+a.	If the specified file is not a csv or no file is specified, an error will appear
+b.	If a directory is specified and the directory contain non csv files, those files will be skipped
+5.	Specify a directory as the output location
+a.	If no output directory is specified, an error will appear
+6.	Open the resulting xml file and replace the character from step 2 with a comma
+7.	Verify data in xml is correct, some special characters may not parse correctly from csv to xml and need to be manually fixed
+a.	Example: „>“ in csv file becomes „&gt;“ in xml file
+8.	Xml file is ready to use for ingestion
